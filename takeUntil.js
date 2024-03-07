@@ -17,17 +17,29 @@ const eqArrays = function(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
       if (arr1[i] !== arr2[i]) {
         return false;
-        // Use break to exit the loop when an unequal pair is found
-        break;
       }
     }
   
     return true;
   };
 
-const array1 = [1, 2, 3];
-const array2 = [1, 2, 3];
-const array3 = [3, 2, 1];
+const takeUntil = function (array, callback) {
+  const result = [];
+  for (const item of array) {
+    if (callback(item)) {
+      break;
+    }
+    result.push(item);
+  }
+  return result;
+}
 
-assertArraysEqual(array1, array2); // Should pass
-assertArraysEqual(array1, array3); // Should fail
+const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
+const results1 = takeUntil(data1, x => x < 0);
+assertArraysEqual(results1, [1, 2, 5, 7, 2]);
+
+console.log('---');
+
+const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
+const results2 = takeUntil(data2, x => x === ',');
+assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
