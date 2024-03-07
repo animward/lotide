@@ -24,4 +24,23 @@ const eqArrays = function (arr1, arr2) {
     return true;
 };
 
+const map = function(array, callback) {
+    const results = [];
+    for (let item of array) {
+        results.push(callback(item));
+    }
+    return results
+}
+
 //map scenarios
+const array4 = [4, 5, 6];
+const result1 = map(array4,  num => num);
+assertArraysEqual(result1, array4);
+
+const array5 = [1, 2, 3];
+const result2 = map(array5,  num => num * 2);
+assertArraysEqual(result1, [2, 4, 6]);
+
+const array6 = ["apple", "orange", "banana"];
+const result3 = map(array6, fruit => fruit.length);
+assertArraysEqual(result3, [5, 6, 6]);
