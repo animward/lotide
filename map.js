@@ -16,8 +16,6 @@ const eqArrays = function (arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         if (arr1[i] !== arr2[i]) {
             return false;
-            // Use break to exit the loop when an unequal pair is found
-            break;
         }
     }
 
@@ -48,7 +46,7 @@ assertArraysEqual(result1, array4);
 
 const array5 = [1, 2, 3];
 const result2 = map(array5,  num => num * 2);
-assertArraysEqual(result1, [2, 4, 6]);
+assertArraysEqual(result2, [2, 4, 6]);
 
 const array6 = ["apple", "orange", "banana"];
 const result3 = map(array6, fruit => fruit.length);
