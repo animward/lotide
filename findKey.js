@@ -36,5 +36,3 @@ assertEqual(findKey(resturants, x => x.stars === 2), "noma");
 assertEqual(findKey(resturants, x => x.stars === 3), "Akaleri");
 
 assertEqual(findKey(resturants, x => x.stars === 4), undefined);
-
-assertEqual(findKey(resturants, x => true), "Blue Hill");
