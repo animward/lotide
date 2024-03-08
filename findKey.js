@@ -6,6 +6,26 @@ const assertEqual = function(actual, expected) {
     }
   };
   
-  // TEST CODE
-  assertEqual("Lighthouse Labs", "Bootcamp");
-  assertEqual(1, 1);
+  const findKey = function(object, callback) {
+    for (const key in object) {
+        if (callback(object[key])) {
+            return key;
+        }
+    }
+    return undefined;
+  };
+
+
+
+
+const resturants = {
+  "Blue Hill": { stars: 1 },
+  "Akaleri":   { stars: 3 },
+  "noma":      { stars: 2 },
+  "elBulli":   { stars: 3 },
+  "Ora":       { stars: 2 },
+  "Akelarre":  { stars: 3 }
+};
+
+//case 1 return noma
+assertEqual(findKey(resturants, x => x.stars === 2), "noma");
