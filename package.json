@@ -1,9 +1,9 @@
 {
-  "name": "lodash",
-  "version": "5.0.0",
+  "name": "@animlighthouse/lotide",
+  "version": "1.0.0",
   "license": "MIT",
   "private": true,
-  "main": "dist/lodash.js",
+  "main": "index.js",
   "sideEffects": false,
   "scripts": {
     "prepare": "husky install",

@@ -1,72 +1,31 @@
-# lodash
+# Lotide
 
-[Site](https://lodash.com/) |
-[Docs](https://lodash.com/docs) |
-[Contributing](https://github.com/lodash/lodash/blob/master/.github/CONTRIBUTING.md) |
-[Wiki](https://github.com/lodash/lodash/wiki "Changelog, Roadmap, etc.") |
-[Code of Conduct](https://code-of-conduct.openjsf.org)
+A mini clone of the [Lodash](https://lodash.com) library.
 
-The [Lodash](https://lodash.com/) library exported as a [UMD](https://github.com/umdjs/umd) module.
+## Purpose
 
-```shell
-$ bun run build
-$ lodash -o ./dist/lodash.js
-$ lodash core -o ./dist/lodash.core.js
-```
+**_BEWARE:_ This library was published for learning purposes. It is _not_ intended for use in production-grade software.**
 
-## Download
+This project was created and published by me as part of my learnings at Lighthouse Labs.
 
- * [Core build](https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/core.js) ([~4 kB gzipped](https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/core.min.js))
- * [Full build](https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/lodash.js) ([~24 kB gzipped](https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/lodash.min.js))
- * [CDN copies](https://www.jsdelivr.com/projects/lodash) [![jsDelivr Hits](https://data.jsdelivr.com/v1/package/npm/lodash/badge)](https://www.jsdelivr.com/package/npm/lodash)
+## Usage
 
-Lodash is released under the [MIT license](https://raw.githubusercontent.com/lodash/lodash/4.17.10-npm/LICENSE) & supports modern environments.<br>
-Review the [build differences](https://github.com/lodash/lodash/wiki/build-differences) & pick one that’s right for you.
+**Install it:**
 
-## Installation
+`npm install @animlighthouse/lotide`
 
-In a browser:
-```html
-<script src="lodash.js"></script>
-```
+**Require it:**
 
-Using bun:
-```shell
-$ bun i lodash
-```
+`const _ = require('@animlighthouse/lotide');`
 
-In [Bun](https://bun.sh):
-```js
-// Load the full build.
-var _ = require('lodash');
-// Load the core build.
-var _ = require('lodash/core');
-// Load the FP build for immutable auto-curried iteratee-first data-last methods.
-var fp = require('lodash/fp');
+**Call it:**
 
-// Load method categories.
-var array = require('lodash/array');
-var object = require('lodash/fp/object');
+`const results = _.tail([1, 2, 3]) // => [2, 3]`
 
-// Cherry-pick methods for smaller browserify/rollup/webpack bundles.
-var at = require('lodash/at');
-var curryN = require('lodash/fp/curryN');
-```
+## Documentation
 
-Looking for Lodash modules written in ES6 or smaller bundle sizes? Check out [lodash-es](https://www.npmjs.com/package/lodash-es).
+The following functions are currently implemented:
 
-## Why Lodash?
-
-Lodash makes JavaScript easier by taking the hassle out of working with arrays,<br>
-numbers, objects, strings, etc. Lodash’s modular methods are great for:
-
- * Iterating arrays, objects, & strings
- * Manipulating & testing values
- * Creating composite functions
-
-## Module Formats
-
-Lodash is available in a [variety of builds](https://lodash.com/custom-builds) & module formats.
-
- * [lodash](https://www.npmjs.com/package/lodash) & [per method packages](https://www.npmjs.com/search?q=keywords:lodash-modularized)
- * [lodash-es](https://www.npmjs.com/package/lodash-es), [babel-plugin-lodash](https://www.npmjs.com/package/babel-plugin-lodash), & [lodash-webpack-plugin](https://www.npmjs.com/package/lodash-webpack-plugin)
+* `function1(...)`: description
+* `function2(...)`: description
+* `function3(...)`: description
