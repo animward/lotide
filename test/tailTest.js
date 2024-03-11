@@ -1,13 +1,13 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-// New cases
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"]).length, 2);
-assertEqual(tail(["Yo Yo", "Lighthouse", "Labs"])[0], "Lighthouse");
+describe('tail', function() {
+  it('should return [2, 3] for [1, 2, 3]', function() {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
-
-assertEqual(tail(["Solo"]).length, 0);
+  it('should return [] for ["Hello"]', function() {
+    assert.deepEqual(tail(["Hello"]), []);
+  });
+});
 
