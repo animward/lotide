@@ -1,7 +1,8 @@
 // FUNCTION IMPLEMENTATION
 const assertEqual = require('../assertEqual');
-
 const eqArrays = require('../eqArrays');
+
+
 
 // Check each element for equality
 for (let i = 0; i < arr1.length; i++) {
