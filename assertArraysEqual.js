@@ -6,9 +6,9 @@ const eqArrays = require('../eqArrays');
 const assertArraysEqual = function (arr1, arr2) {
   // Check each element for equality
   if (eqArrays(arr1, arr2)) {
-    assertEqual(true, true);
+    console.log("Arrays are equal:", arr1, "==", arr2);
   } else {
-    assertEqual(false, true);
+    console.log("Arrays ARENT equal: ", arr1, "!=", arr2);
   }
 }
 
